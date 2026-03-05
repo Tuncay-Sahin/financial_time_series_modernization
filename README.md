@@ -1,5 +1,10 @@
 # Financial Time Series Analysis of Consumer Confidence (VAR Model)
+
 🇹🇷 Turkish project report is available in `docs/project_report.md`.
+
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Econometrics](https://img.shields.io/badge/Model-VAR-green)
+![TimeSeries](https://img.shields.io/badge/Analysis-Time%20Series-orange)
 
 This repository presents an econometric analysis of the dynamic relationships between **consumer confidence and macroeconomic variables** using a **Vector Autoregression (VAR)** framework.
 
@@ -11,6 +16,8 @@ The project investigates how macroeconomic shocks propagate through the system a
 
 - [Project Overview](#project-overview)
 - [Methodology](#methodology)
+- [Model Pipeline](#model-pipeline)
+- [Analysis Workflow](#analysis-workflow)
 - [Key Findings](#key-findings)
 - [Repository Structure](#repository-structure)
 - [Future Work](#future-work)
@@ -90,6 +97,58 @@ These diagnostics help ensure that the model specification is statistically appr
 
 ---
 
+# Model Pipeline
+
+The econometric analysis follows a structured pipeline from raw macroeconomic data to economic interpretation.
+
+Raw Macroeconomic Data  
+↓  
+Data Cleaning & Preparation  
+↓  
+Stationarity Testing (ADF)  
+↓  
+Log-Difference Transformation  
+↓  
+VAR Model Estimation  
+↓  
+Lag Selection & Stability Check  
+↓  
+Granger Causality Analysis  
+↓  
+Impulse Response Functions (IRF)  
+↓  
+Forecast Error Variance Decomposition (FEVD)  
+↓  
+Residual Diagnostics  
+↓  
+Economic Interpretation
+
+---
+
+# Analysis Workflow
+
+The analytical workflow implemented in this repository follows a standard empirical macroeconometric research pipeline.
+
+Data Collection  
+↓  
+Exploratory Data Analysis  
+↓  
+Stationarity Tests  
+↓  
+Model Specification  
+↓  
+VAR Estimation  
+↓  
+Dynamic Analysis (IRF & FEVD)  
+↓  
+Model Diagnostics  
+↓  
+Economic Interpretation
+
+This workflow reflects a typical structure used in **macroeconomic time series analysis and applied econometrics research**.
+
+---
+
 # Key Findings
 
 The empirical results reveal several important insights:
@@ -108,20 +167,57 @@ Overall, the findings suggest that consumer confidence is influenced by macroeco
 
 # Repository Structure
 
-```text
 financial_time_series_modernization/
-│
-├── data/
-│   ├── raw/            # Original dataset
-│   ├── interim/        # Intermediate processing (optional)
-│   └── processed/      # Cleaned or transformed data
-│
-├── notebooks/
-│   └── 01_var_analysis.ipynb   # Main econometric analysis notebook
-│
-├── docs/
-│   └── project_report.md       # Detailed methodological and analytical report
-│
-├── requirements.txt            # Python dependencies
-├── .gitignore                  # Files excluded from version control
-└── README.md                   # Project documentation
+
+data/  
+&nbsp;&nbsp;&nbsp;&nbsp;raw/ — original dataset  
+&nbsp;&nbsp;&nbsp;&nbsp;interim/ — intermediate processing  
+&nbsp;&nbsp;&nbsp;&nbsp;processed/ — cleaned or transformed data  
+
+notebooks/  
+&nbsp;&nbsp;&nbsp;&nbsp;01_var_analysis.ipynb — main econometric analysis notebook  
+
+docs/  
+&nbsp;&nbsp;&nbsp;&nbsp;project_report.md — detailed project report  
+
+requirements.txt — Python dependencies  
+.gitignore — excluded files  
+README.md — project documentation
+
+---
+
+# Future Work
+
+Several extensions could further enhance the analysis.
+
+### Dataset Expansion
+
+Extending the dataset to include more recent observations would allow capturing **new economic cycles and structural shifts**.
+
+### Cointegration Analysis
+
+Future work could test for **long-run equilibrium relationships** between variables using the **Johansen cointegration test**.
+
+If cointegration is detected, the analysis could be extended using a **Vector Error Correction Model (VECM)**.
+
+### Structural Models
+
+Additional econometric approaches could be explored:
+
+- Structural VAR (SVAR)
+- Nonlinear time series models
+- Regime-switching models
+
+### Forecasting Applications
+
+The VAR framework could be extended to perform **out-of-sample forecasting** of consumer confidence dynamics.
+
+---
+
+# Author
+
+This project was developed as part of a learning and research effort in:
+
+- Financial Time Series Analysis  
+- Econometrics  
+- Applied Data Science with Python
